@@ -21,7 +21,7 @@
 
     Form: docker network ls                 //ดู Network ที่มีทั้งหมด
 ```
-* อัพข้อมูลขึ้นและเอาข้อมูลลงจาก docker desktop โดย docker-compose ใช้สำหรับการทำงานกับหลายๆ container
+* อัพข้อมูลขึ้นและเอาข้อมูลลง โดย docker-compose ใช้สำหรับการทำงานกับหลายๆ container
 ```
     Form: docker-compose up         //อัพข้อมูลขึ้น
     Form: docker-compose down       //เอาข้อมูลลง
