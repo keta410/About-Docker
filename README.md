@@ -2,30 +2,36 @@
 
 * สำหรับการ check **version Docker** 
  ```
-    docker version
+    Form: docker version
  ```
 
-* สำหรับการ ดูข้อมูล **containers** ที่กำลังทำงานอยู่
+* สำหรับการ ดูข้อมูล **containers**
 ``` 
-    docker ps
+    Form: docker ps       //ดู container ที่กำลังทำงานอยู่
+    Form: docker ps -a    //ดู container ทั้งหมดที่มี
 ```
-  ถ้าอยากดู **container** ที่มีทั้งหมด ให้เพิ่ม -a ลงไป
+* สำหรับการดู **images** ที่มีอยู่ในเครื่อง
 ```
-    docker ps -a
+    Form: docker images
 ```
-  จะแสดงข้อมูล container ทั้งหมดที่เรามี ทั้งที่กำลังใช้งานอยู่และไม่ได้ใช้
+* เกี่ยวกับ **Network**
+```
+    Form: docker network create <name>      //สร้าง network
+    Ex. docker network create web_network
 
-* สำหรับการดู images ที่มีอยู่ในเครื่อง
+    Form: docker network ls                 //ดู Network ที่มีทั้งหมด
 ```
-    docker images
+* อัพข้อมูลขึ้นและเอาข้อมูลลงจาก docker desktop โดย docker-compose ใช้สำหรับการทำงานกับหลายๆ container
 ```
-
+    Form: docker-compose up         //อัพข้อมูลขึ้น
+    Form: docker-compose down       //เอาข้อมูลลง
+```
 
 ## Docker กับ Portainer
 
 * ใช้สำหรับการสร้างพื้นที่ไว้เก็บข้อมูลของ **Portainer** (แบบถาวร) เพื่อเก็บข้อมูลการทำงานของ contriner แบบละเอียด
 ```
-    Form: docker imagesdocker volume create <ชื่อ>
+    Form: docker imagesdocker volume create <name>
     Ex. docker imagesdocker volume create portainer_data
 
     //portainer_data คือชื่อของ Portainer ที่เราต้องสร้าง
@@ -36,16 +42,12 @@
 
     //เป็นการกำหนดกัน run การทำงาน การไหลผ่านของข้อมูลและการกำหนด version การใช้งานของ Portainer 
 ```
-* แสดงรายการเกี่ยวกับ Network
-```
-    docker network ls
-```
 
 * ถ้าต้องการจะลบ container ใน portainer เราจะต้องหยุดการทำงานก่อนถึงจะลบออกได้
 ```
     Form: docker stop <id-container>      //หยุดการทำงานของ container
     Ex. docker stop 5cs5835bdc2c9
 
-    Form: docker rm <id-container>       //ลบออก
+    Form: docker rm <id-container>       //ลบ container
     Ex. docker rm 5cs5835bdc2c9
 ```
