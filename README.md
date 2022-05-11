@@ -14,6 +14,10 @@
 ```
     Form: docker images
 ```
+* สำหรับการดู **volume** ที่มี
+```
+    Form: docker volume ls 
+```
 * เกี่ยวกับ **Network**
 ```
     Form: docker network create <name>      //สร้าง network
@@ -21,7 +25,7 @@
 
     Form: docker network ls                 //ดู Network ที่มีทั้งหมด
 ```
-* อัพข้อมูลขึ้นและเอาข้อมูลลง โดย docker-compose ใช้สำหรับการทำงานกับหลายๆ container
+* อัพข้อมูลขึ้นและเอาข้อมูลลง โดยคำสั่ง docker-compose ใช้สำหรับการทำงานกับหลายๆ container
 ```
     Form: docker-compose up         //อัพข้อมูลขึ้น
     Form: docker-compose down       //เอาข้อมูลลง
