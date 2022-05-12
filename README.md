@@ -5,18 +5,20 @@
     Form: docker version
  ```
 
-* สำหรับการ ดูข้อมูล **containers**
+* เกี่ยวกับ **containers**
 ``` 
     Form: docker ps       //ดู container ที่กำลังทำงานอยู่
     Form: docker ps -a    //ดู container ทั้งหมดที่มี
+    Form: docker rm <id contrainer>     //ลบ contrainer นั้นๆ
+    Form: docker inspect <id contrainer>    //ดูรายละเอียดเกี่ยวกับ contrainer นั้นๆ
 ```
-* สำหรับการดู **images** ที่มีอยู่ในเครื่อง
+* เกี่ยวกับ **images**
 ```
-    Form: docker images
+    Form: docker images         //ดู image ที่มีอยู่ในเครื่อง
 ```
-* สำหรับการดู **volume** ที่มี
+* เกี่ยวกับ **volume**
 ```
-    Form: docker volume ls 
+    Form: docker volume ls      //ดู volume ที่มี
 ```
 * เกี่ยวกับ **Network**
 ```
@@ -25,10 +27,13 @@
 
     Form: docker network ls                 //ดู Network ที่มีทั้งหมด
 ```
-* อัพข้อมูลขึ้นและเอาข้อมูลลง โดยคำสั่ง docker-compose ใช้สำหรับการทำงานกับหลายๆ container
+* อัพข้อมูลขึ้นและเอาข้อมูลลง โดยคำสั่ง **docker-compose** ใช้สำหรับการทำงานกับหลายๆ container
 ```
+    Form: docker-compose ps         //ดู container ทั้งหมดที่กำลังทำงาน
     Form: docker-compose up         //อัพข้อมูลขึ้น
     Form: docker-compose down       //เอาข้อมูลลง
+    Form: docker-compose build      //สร้าง container ทั้งหมด ที่ up
+    Form: docker-compose build <name>  //สร้าง container
 ```
 
 ## Docker กับ Portainer
