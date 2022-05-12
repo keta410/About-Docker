@@ -27,7 +27,7 @@
 
     Form: docker network ls                 //ดู Network ที่มีทั้งหมด
 ```
-* อัพข้อมูลขึ้นและเอาข้อมูลลง โดยคำสั่ง **docker-compose** ใช้สำหรับการทำงานกับหลายๆ container
+* เกี่ยวกับ **docker-compose** ที่ใช้สำหรับการทำงานกับหลายๆ container
 ```
     Form: docker-compose ps         //ดู container ทั้งหมดที่กำลังทำงาน
     Form: docker-compose up         //อัพข้อมูลขึ้น
